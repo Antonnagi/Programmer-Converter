@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black"
+    >
+
+    <TextView
+        android:id="@+id/calcname"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/programmer_converter"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        />
+    <EditText
+        android:id="@+id/Decimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:maxLength="8"
+        android:padding="@dimen/padd"
+        android:text=""
+        android:digits="123456789"
+        android:background="@color/gray"
+        android:textColor="@color/Selected"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calcname"
+        android:layout_marginTop="60dp"
+        />
+    <EditText
+        android:id="@+id/Binary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:maxLength="8"
+        android:digits="01"
+        android:padding="@dimen/padd"
+        android:text=""
+        android:background="@color/gray"
+        android:textColor="@color/Selected"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Decimal" />
+    <EditText
+        android:id="@+id/Octal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:digits="01234567"
+        android:maxLength="8"
+        android:padding="@dimen/padd"
+        android:text=""
+        android:background="@color/gray"
+        android:textColor="@color/Selected"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Binary" />
+    <EditText
+        android:id="@+id/Hexa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:digits="0123456789ABCDEFabcdef"
+        android:maxLength="8"
+        android:padding="@dimen/padd"
+        android:text=""
+        android:background="@color/gray"
+        android:textColor="@color/Selected"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Octal" />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Clear"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_weight="1"
+        android:background="@color/gray"
+        android:text="clear"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Hexa"
+        android:layout_margin="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
